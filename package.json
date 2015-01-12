@@ -1,8 +1,8 @@
 {
-  "name": "ember-tools",
-  "version": "0.2.7",
+  "name": "geneva-tools",
+  "version": "1.0.0",
   "bin": {
-    "ember": "./bin/ember"
+    "geneva-build": "./bin/geneva-build"
   },
   "dependencies": {
     "sync-prompt": "*",

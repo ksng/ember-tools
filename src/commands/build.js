@@ -21,7 +21,7 @@ function singleBuild(env){
   precompileTemplates(function() {
     createIndex(function() {
       build(env, function() {
-        if (env.cleanup) cleanup();
+       // if (env.cleanup) cleanup();
       });
     });
   });
@@ -82,7 +82,8 @@ function createIndex(cb) {
 }
 
 function build(env, cb) {
-  var now = Date.now();
+    cb();
+ /* var now = Date.now();
   var root = config().jsPath;
   var outFile = (env.outFile || getAssetPath('application.js'));
   var outDir = path.dirname(outFile);
@@ -103,7 +104,7 @@ function build(env, cb) {
     if(stderr) console.log(color.red(stderr.trim()));
     if (error && !env.watch) throw new Error(error);
     cb();
-  });
+  });*/
 }
 
 function cleanup() {
