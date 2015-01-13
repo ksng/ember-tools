@@ -83,28 +83,6 @@ function createIndex(cb) {
 
 function build(env, cb) {
     cb();
- /* var now = Date.now();
-  var root = config().jsPath;
-  var outFile = (env.outFile || getAssetPath('application.js'));
-  var outDir = path.dirname(outFile);
-  var command = [
-    'node', __dirname + '/../../node_modules/browserify/bin/cmd',
-    '--noparse='+root+'/vendor/ember.js',
-    '--noparse='+root+'/vendor/jquery.js',
-    '--noparse='+root+'/vendor/ember-data.js',
-    '--noparse='+root+'/templates.js',
-    '-e', root+'/index', '>', outFile
-  ];
-  if (!fs.existsSync(outDir)) fs.mkdirpSync(outDir);
-  if (env.debug) command.splice(2, 0, '-d');
-  exec(command.join(' '), function (error, stdout, stderr) {
-    message.fileCreated(outFile);
-    message.notify('Build time: '+(Date.now() - now)+' ms');
-    if(stdout) console.log(stdout.trim());
-    if(stderr) console.log(color.red(stderr.trim()));
-    if (error && !env.watch) throw new Error(error);
-    cb();
-  });*/
 }
 
 function cleanup() {
